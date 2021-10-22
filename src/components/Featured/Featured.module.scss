@@ -1,0 +1,16 @@
+.FeaturedFull {
+  background-color: #ffffff;
+  border-bottom: 2px solid #db1d24;
+  padding: 10px 0;
+}
+.Desc {
+  background: rgb(32, 32, 32);
+  opacity: 0.6;
+  color: white;
+}
+
+@media only screen and(max-width: 500px) {
+  .FeaturedFull {
+    display: none;
+  }
+}

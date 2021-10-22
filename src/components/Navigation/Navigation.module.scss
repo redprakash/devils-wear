@@ -1,0 +1,20 @@
+.Menu {
+  background-color: #db1d24;
+}
+
+.FormControl {
+  margin: 0 10px;
+  background-color: #fa434a;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.SearchBtn {
+  background-color: #000000;
+  border: none;
+  color: white;
+
+  &:hover {
+    background-color: #9e0409;
+  }
+}
