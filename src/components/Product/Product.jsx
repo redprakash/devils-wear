@@ -1,9 +1,14 @@
 import { Container } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import styles from './Product.module.scss';
 
 const Product = () => {
+  const { id } = useParams();
+  console.log({ id });
+
   return (
-    <Container>
-      <h1>This will be details of individual laptop</h1>
+    <Container className={styles.ContainerBorder}>
+      <h1>This will be details of individual Kit</h1>
     </Container>
   );
 };
