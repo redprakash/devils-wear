@@ -10,6 +10,14 @@ const cleanRecords = (querySnapshot) => {
 //get all the products list
 export const getProducts = async () => {
   const colRef = firestore.collection('products');
-  const productSnapshot = await colRef.get();
-  return cleanRecords(productSnapshot);
+  const productQuerySnapshot = await colRef.get();
+  return cleanRecords(productQuerySnapshot);
+};
+
+//get a specific product
+export const findProduct = async (id) => {
+  const colRef = firestore.collection('products');
+  const docRef = colRef.doc(id);
+  const docSnap = await docRef.get();
+  return cleanRecord(docSnap);
 };

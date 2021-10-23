@@ -1,7 +1,7 @@
-import styles from './Footer.module.scss';
+import './Footer.scss';
 const Footer = () => {
   return (
-    <section fluid="true" className={styles.Footer}>
+    <section fluid="true" className="Footer">
       &copy; Devil's Wear
     </section>
   );

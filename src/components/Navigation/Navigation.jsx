@@ -1,4 +1,4 @@
-import styles from './Navigation.module.scss';
+import './Navigation.scss';
 import {
   Nav,
   Navbar,
@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 const Navigation = () => {
   return (
-    <Navbar collapseOnSelect expand="md" className={styles.Menu} variant="dark">
+    <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
       <Container>
         <Navbar.Brand href="/">Devil's Wear</Navbar.Brand>
 
@@ -20,9 +20,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/product/:id">
-              Product
-            </Nav.Link>
+
             <Nav.Link as={Link} to="/products">
               Products
             </Nav.Link>
@@ -35,9 +33,9 @@ const Navigation = () => {
               type="search"
               placeholder="Search"
               aria-label="Search"
-              className={styles.FormControl}
+              className="FormControl"
             />
-            <Button className={styles.SearchBtn}>Search</Button>
+            <Button className="SearchBtn">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

@@ -14,3 +14,9 @@
     display: none;
   }
 }
+.carousel .carousel-indicators li {
+  background-color: gray;
+}
+.carousel .carousel-indicators li.active {
+  background-color: var(--primary);
+}

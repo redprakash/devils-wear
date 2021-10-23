@@ -9,9 +9,10 @@ const ProductCard = ({ product }) => {
           <Card.Title>{product.title}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
         </Card.Body>
-        <ListGroupItem>AUD {product.price}</ListGroupItem>
+
         <ListGroup className="list-group-flush">
-          <ListGroupItem>
+          <ListGroupItem className="d-flex justify-content-between">
+            <ListGroupItem>AUD {product.price}</ListGroupItem>
             <Button variant="dark">Add to Cart</Button>
           </ListGroupItem>
           <ListGroupItem>
