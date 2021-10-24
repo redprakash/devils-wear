@@ -4,14 +4,15 @@ const ProductCard = ({ product }) => {
   return (
     <Col className="mt-4">
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={product.imageurl} />
+        <Card.Img variant="top" src={product.imageurl} alt={product.title} />
         <Card.Body>
           <Card.Title>{product.title}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
         </Card.Body>
-        <ListGroupItem>AUD {product.price}</ListGroupItem>
+
         <ListGroup className="list-group-flush">
-          <ListGroupItem>
+          <ListGroupItem className="d-flex justify-content-between">
+            <ListGroupItem>AUD {product.price}</ListGroupItem>
             <Button variant="dark">Add to Cart</Button>
           </ListGroupItem>
           <ListGroupItem>

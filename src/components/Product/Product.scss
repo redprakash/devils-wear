@@ -1,0 +1,26 @@
+.ProductContainer {
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: space-around;
+
+  margin: 10px auto;
+  &_Header {
+    color: rgb(0, 0, 0);
+  }
+  &_Left {
+    width: 50%;
+  }
+  &_Right {
+    width: 60%;
+    padding: 20px;
+  }
+}
+h1,
+h4,
+h5 {
+  border-bottom: 1px solid lightgrey;
+  width: fit-content;
+  padding: 10px 0px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
