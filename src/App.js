@@ -5,16 +5,17 @@ import Navigation from './components/Navigation';
 
 import Footer from './components/Footer';
 import Routes from './containers/Routes/Routes';
+import SearchProvider from './context/SearchContext';
 
 function App() {
   return (
-    <>
+    <SearchProvider>
       <Router>
         <Navigation />
         <Routes />
       </Router>
       <Footer />
-    </>
+    </SearchProvider>
   );
 }
 

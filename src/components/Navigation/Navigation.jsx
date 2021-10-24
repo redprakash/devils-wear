@@ -3,11 +3,14 @@ import {
   Nav,
   Navbar,
   Container,
-  Form,
-  FormControl,
   Button,
+  Badge,
+  OverlayTrigger,
+  Tooltip,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SearchBar from '../SearchBar/SearchBar';
+import { BsFillCartFill } from 'react-icons/bs';
 const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
@@ -28,15 +31,24 @@ const Navigation = () => {
               About
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              className="FormControl"
-            />
-            <Button className="SearchBtn">Search</Button>
-          </Form>
+
+          <SearchBar />
+          <OverlayTrigger
+            placement="bottom"
+            overlay={
+              <Tooltip>
+                Total Items in <strong>Cart</strong>
+              </Tooltip>
+            }
+          >
+            <Nav.Link as={Link} to="#">
+              <Button variant="warning" className="d-flex">
+                <BsFillCartFill className="Cart" />
+                <Badge bg="dark">4</Badge>
+                <span className="visually-hidden">Total Items in Cart</span>
+              </Button>
+            </Nav.Link>
+          </OverlayTrigger>
         </Navbar.Collapse>
       </Container>
     </Navbar>
