@@ -13,6 +13,7 @@ const ProductsList = () => {
     <section fluid="true" className="bg-light p-3">
       <Container>
         <Row>
+          <h4>All Products</h4>
           {products &&
             products.map((product) => (
               <ProductCard product={product} key={product.id} />
