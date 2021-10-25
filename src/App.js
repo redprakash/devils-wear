@@ -9,13 +9,16 @@ import SearchProvider from './context/SearchContext';
 
 function App() {
   return (
-    <SearchProvider>
-      <Router>
-        <Navigation />
-        <Routes />
-      </Router>
+    <div>
+      <SearchProvider>
+        <Router>
+          <Navigation />
+          <Routes />
+        </Router>
+      </SearchProvider>
+
       <Footer />
-    </SearchProvider>
+    </div>
   );
 }
 
