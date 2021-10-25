@@ -36,7 +36,7 @@ const Navigation = () => {
             placement="bottom"
             overlay={
               <Tooltip>
-                Total Items in <strong>Cart</strong>
+                My <strong>Cart</strong>
               </Tooltip>
             }
           >
@@ -44,7 +44,7 @@ const Navigation = () => {
               <Button variant="warning" className="d-flex">
                 <BsFillCartFill className="Cart" />
                 <Badge bg="dark">4</Badge>
-                <span className="visually-hidden">Total Items in Cart</span>
+                <span className="visually-hidden">My Cart</span>
               </Button>
             </Nav.Link>
           </OverlayTrigger>
