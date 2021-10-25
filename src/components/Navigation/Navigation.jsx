@@ -1,4 +1,5 @@
 import './Navigation.scss';
+import SearchBar from '../SearchBar/SearchBar';
 import {
   Nav,
   Navbar,
@@ -9,7 +10,6 @@ import {
   Tooltip,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import SearchBar from '../SearchBar/SearchBar';
 import { BsFillCartFill } from 'react-icons/bs';
 const Navigation = () => {
   return (
@@ -31,7 +31,6 @@ const Navigation = () => {
               About
             </Nav.Link>
           </Nav>
-
           <SearchBar />
           <OverlayTrigger
             placement="bottom"
