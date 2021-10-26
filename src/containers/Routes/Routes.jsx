@@ -1,7 +1,8 @@
 import About from '../../components/About';
-import Home from '../../components/Home/';
+import Home from '../../components/Home';
 import Cart from '../../components/Cart';
 import Product from '../../components/Product';
+import SearchResults from '../../components/SearchResults';
 import ProductsList from '../../containers/ProductsList';
 import { Route, Switch } from 'react-router-dom';
 const routes = [
@@ -23,6 +24,10 @@ const routes = [
     component: About,
   },
   {
+
+    path: '/searchresults',
+    component: SearchResults,
+  },
     path: '/cart',
     component: Cart,
   },
