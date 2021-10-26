@@ -1,6 +1,11 @@
 import { Col, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BsFillCartPlusFill } from 'react-icons/bs';
+import { CartBadgeCountContext } from '../../context/CartBadgeCountContext';
+import { useContext } from 'react';
 const ProductCard = ({ product }) => {
+  const { handleClick } = useContext(CartBadgeCountContext);
+
   return (
     <Col className="mt-4">
       <Card style={{ width: '18rem' }}>
@@ -13,7 +18,10 @@ const ProductCard = ({ product }) => {
         <ListGroup className="list-group-flush">
           <ListGroupItem className="d-flex justify-content-between">
             <ListGroupItem>AUD {product.price}</ListGroupItem>
-            <Button variant="dark">Add to Cart</Button>
+
+            <Button variant="dark" onClick={handleClick}>
+              <BsFillCartPlusFill />
+            </Button>
           </ListGroupItem>
           <ListGroupItem>
             <Link as={Link} to={`product/${product.id}`}>

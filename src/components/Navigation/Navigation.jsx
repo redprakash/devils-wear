@@ -1,14 +1,20 @@
 import './Navigation.scss';
+import SearchBar from '../SearchBar/SearchBar';
 import {
   Nav,
   Navbar,
   Container,
-  Form,
-  FormControl,
   Button,
+  Badge,
+  OverlayTrigger,
+  Tooltip,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BsFillCartFill } from 'react-icons/bs';
+import { CartBadgeCountContext } from '../../context/CartBadgeCountContext';
+import { useContext } from 'react';
 const Navigation = () => {
+  const { cartCount } = useContext(CartBadgeCountContext);
   return (
     <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
       <Container>
@@ -28,15 +34,23 @@ const Navigation = () => {
               About
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              className="FormControl"
-            />
-            <Button className="SearchBtn">Search</Button>
-          </Form>
+          <SearchBar />
+          <OverlayTrigger
+            placement="bottom"
+            overlay={
+              <Tooltip>
+                My <strong>Cart</strong>
+              </Tooltip>
+            }
+          >
+            <Nav.Link as={Link} to="/cart">
+              <Button variant="warning" className="d-flex">
+                <BsFillCartFill className="Cart" />
+                <Badge bg="dark">{cartCount}</Badge>
+                <span className="visually-hidden">My Cart</span>
+              </Button>
+            </Nav.Link>
+          </OverlayTrigger>
         </Navbar.Collapse>
       </Container>
     </Navbar>

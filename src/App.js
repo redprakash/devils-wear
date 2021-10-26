@@ -5,16 +5,22 @@ import Navigation from './components/Navigation';
 
 import Footer from './components/Footer';
 import Routes from './containers/Routes/Routes';
+import SearchProvider from './context/SearchContext';
+import CartBadgeCountProvider from './context/CartBadgeCountContext';
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navigation />
-        <Routes />
-      </Router>
+    <div>
+      <CartBadgeCountProvider>
+        <SearchProvider>
+          <Router>
+            <Navigation />
+            <Routes />
+          </Router>
+        </SearchProvider>
+      </CartBadgeCountProvider>
       <Footer />
-    </>
+    </div>
   );
 }
 
