@@ -24,10 +24,10 @@ const routes = [
     component: About,
   },
   {
-
     path: '/searchresults',
     component: SearchResults,
   },
+  {
     path: '/cart',
     component: Cart,
   },
