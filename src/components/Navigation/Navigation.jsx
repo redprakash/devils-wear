@@ -11,7 +11,10 @@ import {
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsFillCartFill } from 'react-icons/bs';
+import { CartBadgeCountContext } from '../../context/CartBadgeCountContext';
+import { useContext } from 'react';
 const Navigation = () => {
+  const { cartCount } = useContext(CartBadgeCountContext);
   return (
     <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
       <Container>
@@ -36,15 +39,15 @@ const Navigation = () => {
             placement="bottom"
             overlay={
               <Tooltip>
-                Total Items in <strong>Cart</strong>
+                My <strong>Cart</strong>
               </Tooltip>
             }
           >
-            <Nav.Link as={Link} to="#">
+            <Nav.Link as={Link} to="/cart">
               <Button variant="warning" className="d-flex">
                 <BsFillCartFill className="Cart" />
-                <Badge bg="dark">4</Badge>
-                <span className="visually-hidden">Total Items in Cart</span>
+                <Badge bg="dark">{cartCount}</Badge>
+                <span className="visually-hidden">My Cart</span>
               </Button>
             </Nav.Link>
           </OverlayTrigger>
