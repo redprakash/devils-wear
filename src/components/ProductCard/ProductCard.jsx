@@ -14,18 +14,16 @@ const ProductCard = ({ product }) => {
           <Card.Title>{product.title}</Card.Title>
           <Card.Text>{product.description}</Card.Text>
         </Card.Body>
-
         <ListGroup className="list-group-flush">
           <ListGroupItem className="d-flex justify-content-between">
             <ListGroupItem>AUD {product.price}</ListGroupItem>
-
             <Button variant="dark" onClick={handleClick}>
               <BsFillCartPlusFill />
             </Button>
           </ListGroupItem>
           <ListGroupItem>
             <Link as={Link} to={`product/${product.id}`}>
-              <Button variant="danger">Details</Button>
+              <Button variant="warning">Details</Button>
             </Link>
           </ListGroupItem>
         </ListGroup>
