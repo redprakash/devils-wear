@@ -1,10 +1,11 @@
 .Menu {
-  background-color: #db1d24;
+  background-color: #c21117;
 }
 
 .FormControl {
   margin: 0 10px;
-  background-color: #fa434a;
+  background-color: #dd282e;
+
   outline: none;
   border: none;
   border-radius: 10px;
@@ -23,4 +24,19 @@
 }
 .Cart {
   margin-right: 5px;
+}
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(209, 209, 209);
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(209, 209, 209);
+}
+
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(209, 209, 209);
 }

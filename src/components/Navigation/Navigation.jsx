@@ -18,7 +18,9 @@ const Navigation = () => {
   return (
     <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Devil's Wear</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          Devil's Wear
+        </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
