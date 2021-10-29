@@ -1,10 +1,20 @@
 import { Col, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { BsFillCartPlusFill } from 'react-icons/bs';
+import {
+  BsFillCartPlusFill,
+  BsSuitHeart,
+  BsSuitHeartFill,
+} from 'react-icons/bs';
 import { CartBadgeCountContext } from '../../context/CartBadgeCountContext';
 import { useContext } from 'react';
+import './ProductCard.scss';
+import { useState } from 'react';
 const ProductCard = ({ product }) => {
   const { handleClick } = useContext(CartBadgeCountContext);
+  const [favDefault, setfavDefault] = useState(true);
+  const favClick = () => {
+    setfavDefault(!favDefault);
+  };
 
   return (
     <Col className="mt-4">
@@ -17,6 +27,17 @@ const ProductCard = ({ product }) => {
         <ListGroup className="list-group-flush">
           <ListGroupItem className="d-flex justify-content-between">
             <ListGroupItem>AUD {product.price}</ListGroupItem>
+
+            {favDefault ? (
+              <Button variant="outline-warning" onClick={favClick}>
+                <BsSuitHeart className="Fav" />
+              </Button>
+            ) : (
+              <Button variant="outline-warning" onClick={favClick}>
+                <BsSuitHeartFill className="Fav" />
+              </Button>
+            )}
+
             <Button variant="dark" onClick={handleClick}>
               <BsFillCartPlusFill />
             </Button>
