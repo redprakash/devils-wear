@@ -27,17 +27,13 @@ const ProductCard = ({ product }) => {
         <ListGroup className="list-group-flush">
           <ListGroupItem className="d-flex justify-content-between">
             <ListGroupItem>AUD {product.price}</ListGroupItem>
-
-            {favDefault ? (
-              <Button variant="outline-warning" onClick={favClick}>
+            <Button variant="outline-warning" onClick={favClick}>
+              {favDefault ? (
                 <BsSuitHeart className="Fav" />
-              </Button>
-            ) : (
-              <Button variant="outline-warning" onClick={favClick}>
+              ) : (
                 <BsSuitHeartFill className="Fav" />
-              </Button>
-            )}
-
+              )}
+            </Button>
             <Button variant="dark" onClick={handleClick}>
               <BsFillCartPlusFill />
             </Button>
