@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/deploy-devilswear/static/css/main.60ea873c.chunk.css",
-    "main.js": "/deploy-devilswear/static/js/main.688bc350.chunk.js",
-    "main.js.map": "/deploy-devilswear/static/js/main.688bc350.chunk.js.map",
-    "runtime-main.js": "/deploy-devilswear/static/js/runtime-main.97553548.js",
-    "runtime-main.js.map": "/deploy-devilswear/static/js/runtime-main.97553548.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/deploy-devilswear/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.d877b96d.chunk.js": "/deploy-devilswear/static/js/2.d877b96d.chunk.js",
-    "static/js/2.d877b96d.chunk.js.map": "/deploy-devilswear/static/js/2.d877b96d.chunk.js.map",
-    "static/js/3.356dd657.chunk.js": "/deploy-devilswear/static/js/3.356dd657.chunk.js",
-    "static/js/3.356dd657.chunk.js.map": "/deploy-devilswear/static/js/3.356dd657.chunk.js.map",
-    "index.html": "/deploy-devilswear/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/deploy-devilswear/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.60ea873c.chunk.css.map": "/deploy-devilswear/static/css/main.60ea873c.chunk.css.map",
-    "static/js/2.d877b96d.chunk.js.LICENSE.txt": "/deploy-devilswear/static/js/2.d877b96d.chunk.js.LICENSE.txt"
+    "main.css": "/devils-wear/static/css/main.60ea873c.chunk.css",
+    "main.js": "/devils-wear/static/js/main.3b0576b2.chunk.js",
+    "main.js.map": "/devils-wear/static/js/main.3b0576b2.chunk.js.map",
+    "runtime-main.js": "/devils-wear/static/js/runtime-main.114970e3.js",
+    "runtime-main.js.map": "/devils-wear/static/js/runtime-main.114970e3.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/devils-wear/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.ff354494.chunk.js": "/devils-wear/static/js/2.ff354494.chunk.js",
+    "static/js/2.ff354494.chunk.js.map": "/devils-wear/static/js/2.ff354494.chunk.js.map",
+    "static/js/3.356dd657.chunk.js": "/devils-wear/static/js/3.356dd657.chunk.js",
+    "static/js/3.356dd657.chunk.js.map": "/devils-wear/static/js/3.356dd657.chunk.js.map",
+    "index.html": "/devils-wear/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/devils-wear/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.60ea873c.chunk.css.map": "/devils-wear/static/css/main.60ea873c.chunk.css.map",
+    "static/js/2.ff354494.chunk.js.LICENSE.txt": "/devils-wear/static/js/2.ff354494.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.97553548.js",
+    "static/js/runtime-main.114970e3.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.d877b96d.chunk.js",
+    "static/js/2.ff354494.chunk.js",
     "static/css/main.60ea873c.chunk.css",
-    "static/js/main.688bc350.chunk.js"
+    "static/js/main.3b0576b2.chunk.js"
   ]
 }
