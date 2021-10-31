@@ -14,6 +14,11 @@ const Routes = () => {
       component: Home,
     },
     {
+      path: "/deploy-devilswear",
+      exact: true,
+      component: Home,
+    },
+    {
       path: "/product/:id",
       component: Product,
     },
