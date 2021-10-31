@@ -1,6 +1,6 @@
-import React from 'react';
-import ProductsList from '../../containers/ProductsList';
-import Featured from '../Featured';
+import React from "react";
+import ProductsList from "../../containers/ProductsList";
+import Featured from "../Featured";
 const Home = () => {
   return (
     <>

@@ -1,5 +1,5 @@
-import './Navigation.scss';
-import SearchBar from '../SearchBar/SearchBar';
+import "./Navigation.scss";
+import SearchBar from "../SearchBar/SearchBar";
 import {
   Nav,
   Navbar,
@@ -8,13 +8,13 @@ import {
   Badge,
   OverlayTrigger,
   Tooltip,
-} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { BsFillCartFill } from 'react-icons/bs';
-import { CartBadgeCountContext } from '../../context/CartBadgeCountContext';
-import { useContext } from 'react';
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { BsFillCartFill } from "react-icons/bs";
+import { DevilCart } from "../../context/CartProvider";
+import { useContext } from "react";
 const Navigation = () => {
-  const { cartCount } = useContext(CartBadgeCountContext);
+  const { cart } = useContext(DevilCart);
   return (
     <Navbar collapseOnSelect expand="md" className="Menu" variant="dark">
       <Container>
@@ -48,7 +48,7 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/cart">
               <Button variant="warning" className="d-flex">
                 <BsFillCartFill className="Cart" />
-                <Badge bg="dark">{cartCount}</Badge>
+                <Badge bg="dark">{cart.length}</Badge>
                 <span className="visually-hidden">My Cart</span>
               </Button>
             </Nav.Link>
